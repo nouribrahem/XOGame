@@ -1,3 +1,4 @@
+import GBG.Board;
 
 public class XOBoard extends Board {
     

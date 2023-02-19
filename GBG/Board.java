@@ -1,3 +1,4 @@
+package GBG;
 
 import java.util.Arrays;
 public abstract class Board
