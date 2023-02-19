@@ -1,4 +1,3 @@
-import src.Board;
 
 public class XOBoard extends Board {
     
