@@ -1,4 +1,6 @@
-public class XOBoard extends Board{
+import src.Board;
+
+public class XOBoard extends Board {
     
     XOBoard()
     {

@@ -1,5 +1,7 @@
+package src;
+
 import java.util.Arrays;
-abstract class Board
+public abstract class Board
 {
     protected int dimension;
     protected char board[][];
