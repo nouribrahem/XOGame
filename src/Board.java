@@ -1,9 +1,9 @@
 import java.util.Arrays;
 abstract class Board
 {
-    private int dimension;
-    private char board[][];
-    private int countMoves;
+    protected int dimension;
+    protected char board[][];
+    protected int countMoves;
 
     public void setDimension(int dim)
     {
@@ -45,6 +45,13 @@ abstract class Board
 
     public abstract boolean isWinner();
 
-    public abstract boolean isDraw();
+    public boolean isDraw()
+    {
+        if (countMoves == (dimension * dimension))
+        {
+            return true;
+        }
+        return false;
+    }
 
 }
