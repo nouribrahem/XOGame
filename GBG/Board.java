@@ -12,10 +12,13 @@ public abstract class Board
         this.dimension = dim;
         board = new char[dimension][dimension];
         countMoves = 0;
+        char count = '1';
         for(int i = 0 ; i < dimension; i++)
         {
-            Arrays.fill(board[i],'-');
-
+            for(int j = 0 ; j < dimension; j++)
+            {
+                board[i][j] = count++;
+            }
         }
     }
 
@@ -25,7 +28,7 @@ public abstract class Board
         {
             for(int j = 0; j < dimension; j++)
             {
-                System.out.print(board[i][j]  + " r");
+                System.out.print(board[i][j]  + " ");
             }
             System.out.println('\n');
         }

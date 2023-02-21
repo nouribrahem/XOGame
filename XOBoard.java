@@ -5,6 +5,7 @@ public class XOBoard extends Board {
     XOBoard()
     {
         this.dimension = 3;
+        setDimension(dimension);
     }
     public boolean isWinner()
     {
