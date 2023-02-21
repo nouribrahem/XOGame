@@ -1,33 +1,26 @@
 package GBG;
 
 import java.util.Scanner;
-public class Player
+public abstract class Player
 {
     protected String name;
     protected char symbol;
 
-    Player(String name, char symbol)
-    {
-        this.name = name;
-        this.symbol = symbol;
-    }
+    
 
-    public int getX()
+    public int getMove()
     {
         System.out.println("enter move position: ");
         Scanner in = new Scanner(System.in);
         int x = in.nextInt();
         return x;
     }
-
-    public int getY()
+    public char getSymbol()
     {
-        Scanner in = new Scanner(System.in);
-        int y = in.nextInt();
-        return y;
+        return this.symbol;
     }
-    
-
-
-
+    public String getName()
+    {
+        return this.name;
+    }
 }

@@ -1,5 +1,5 @@
 package GBG;
 
-abstract class Game {
+public abstract class Game {
     abstract public void run();
 }

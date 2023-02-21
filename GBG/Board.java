@@ -28,24 +28,31 @@ public abstract class Board
         {
             for(int j = 0; j < dimension; j++)
             {
-                System.out.print(board[i][j]  + " ");
+                System.out.print(" | " + board[i][j]  + " | ");
             }
             System.out.println('\n');
         }
     }
 
-    public boolean updateBoard(int x, int y, char symbol)
+    public boolean updateBoard(int x, char symbol)
     {
-        if (x <= dimension - 1 && x >= 0 && y <= dimension - 1 && y >= 0)
+        if (x >= 1 && x <= 9)
         {
-            board[x][y] = symbol;
-            countMoves++;
-            return true;
+            for(int i = 0; i < dimension; i++)
+            {
+                for(int j = 0; j < dimension; j++)
+                {
+                    if(board[i][j] == (char)(x + '0'))
+                    {
+                        board[i][j] = symbol;
+                        countMoves++;
+                        return true;
+                    }
+                }
+            }
+            
         }
-        else
-        {
-            return false;
-        }
+        return false;
     }
 
     public abstract boolean isWinner();
