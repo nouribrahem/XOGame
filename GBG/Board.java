@@ -1,6 +1,5 @@
 package GBG;
 
-import java.util.Arrays;
 public abstract class Board
 {
     protected int dimension;
@@ -36,7 +35,7 @@ public abstract class Board
 
     public boolean updateBoard(int x, char symbol)
     {
-        if (x >= 1 && x <= 9)
+        if (x >= 1 && x <= dimension * dimension)
         {
             for(int i = 0; i < dimension; i++)
             {
@@ -50,7 +49,7 @@ public abstract class Board
                     }
                 }
             }
-            
+
         }
         return false;
     }
