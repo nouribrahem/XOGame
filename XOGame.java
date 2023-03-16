@@ -34,11 +34,7 @@ public class XOGame extends Game{
                 System.out.println("player " + player2.getName() + " is winner!");
                 return;
             }
-            if(b.isDraw())
-            {
-                System.out.println("it's a draw!");
-                return;
-            }
+            
 
         }
 
